@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>创建监测事件</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src='../js/lib/jquery.min.js'></script>
+    <script src='../js/common.js'></script>
+</head>
+<body>
+<header>
+    <div class="header">
+        <span class="logo"></span>
+        <span class="title">九次方民意云大数据平台</span>
+        <span class="change_theme">深色版</span>
+        <span class="out fr">退出</span>
+        <span class="head_icon fr">
+            <a href="information.html" style="display: inline-block;width: 100%;height: 100%"></a>
+        </span>
+        <span class="loading fr"><a href="./appLoad.html">APP下载</a></span>
+    </div>
+</header>
+<div class="menu">
+    <ul>
+        <li chref="./index.html">首页<div class="shadow"></div></li>
+        <li chref="./opinionFocus.html">民意聚焦<div class="shadow"></div></li>
+        <li chref="./send_ays.html">专题分析<div class="shadow"></div></li>
+        <li chref="./war-index.html">大数据预警<div class="shadow"></div></li>
+        <li chref="./person_gov_search.html">民意查询<div class="shadow"></div></li>
+        <li chref="./opinionMonitoring.html" class="active">民意监测<div class="shadow"></div></li>
+    </ul>
+    <time class="fr">2016年8月1日</time>
+</div>
+<div id="content">
+    <!--创建监测事件页面-->
+    <div class="mainContainer">
+        <div class="eventContainer">
+            <div class="amTitle">创建监测事件</div>
+            <div class="eventDetail">
+                <div>
+                    <div class="marB30">
+                        <p><span class="colRed">*</span>1.请输入您想关注的事件名称</p>
+                        <input class="borBac eventName" type="text" />
+                    </div>
+                    <div class="marB30">
+                        <p><span class="colRed">*</span>2.请输入您想关注的事件关键词</p>
+                        <input class="borBac eventKey" type="text" />
+                    </div>
+                    <div class="marB30">
+                        <p><span class="colRed">*</span>3.请选择事件发生地区</p>
+                        <div class="checkbox_con">
+                            <span><input type="checkbox" class="input_check" id="check01"><i></i><label for="check01">微山县</label></span>
+                            <span><input type="checkbox" class="input_check" id="check02"><i></i><label for="check02">泰安市</label></span>
+                            <span><input type="checkbox" class="input_check" id="check03"><i></i><label for="check03">任城区</label></span>
+                            <span><input type="checkbox" class="input_check" id="check04"><i></i><label for="check04">梁山县</label></span>
+                            <span><input type="checkbox" class="input_check" id="check05"><i></i><label for="check05">高新区</label></span>
+                            <span><input type="checkbox" class="input_check" id="check06"><i></i><label for="check06">鱼台县</label></span>
+                        </div>
+                        <!--<textarea class="borBac eventRegion"  maxlength="50" placeholder="最多允许输入50个字符"></textarea>-->
+                    </div>
+                    <div>
+                        <button class="confirm borBac active">确认</button>
+                        <button class="reset borBac">重置</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <span>京ICP备0000000000号 版权所有  XXX政府</span>
+    <span> Copyright 2016 by Jusfoun.com. All Right Reserved</span>
+</footer>
+</body>
+<!--<script src='../js/lib/JUSLoading/js/jquery-JUSLoading.js'></script>-->
+<script src="../js/addMonitorEvent.js"></script>
+</html>
+
+
+
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>派发分析</title>
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <script type="text/javascript" src='../js/lib/jquery.min.js'></script>
+    <script type="text/javascript" src='../js/common.js'></script>
+</head>
+<body>
+<header>
+    <div class="header">
+        <span class="logo"></span>
+        <span class="title">九次方民意云大数据平台</span>
+        <span class="change_theme">深色版</span>
+        <span class="out fr">退出</span>
+        <span class="head_icon fr">
+            <a href="information.html" style="display: inline-block;width: 100%;height: 100%"></a>
+        </span>
+        <span class="loading fr"><a href="./appLoad.html">APP下载</a></span>
+    </div>
+</header>
+<div class="menu">
+    <ul>
+        <li chref="./index.html">首页<div class="shadow"></div></li>
+        <li chref="./opinionFocus.html">民意聚焦<div class="shadow"></div></li>
+        <li chref="./send_ays.html" class="active">专题分析<div class="shadow"></div></li>
+        <li chref="./war-index.html">大数据预警<div class="shadow"></div></li>
+        <li chref="./person_gov_search.html">民意查询<div class="shadow"></div></li>
+        <li chref="./opinionMonitoring.html">民意监测<div class="shadow"></div></li>
+    </ul>
+    <time class="fr">2016年8月1日</time>
+</div>
+<div id="content">
+    <!--专题分析-->
+    <div class="main">
+        <div class="left_menu">
+            <ul>
+                <li class="active">
+                   <span class="tit">
+                       政府渠道专题
+                       <i class="arrow fr"></i>
+                   </span>
+                    <div class="min_menu">
+                        <span class="active" value="0" chref="./send_ays.html">派发分析</span>
+                        <span value="1" chref="./type_ays.html">类型分析</span>
+                        <span value="2" chref="./area_ays.html">区域分析</span>
+                        <span value="3" chref="./source_ays.html">来源分析</span>
+                        <span value="4" chref="./tongbi_ays.html">同比分析</span>
+                        <span value="5" chref="./huanbi_ays.html">环比分析</span>
+                    </div>
+                </li>
+                <li>
+                   <span class="tit">
+                       网络民意专题
+                       <i class="arrow fr"></i>
+                   </span>
+                    <div class="min_menu">
+                        <span value="6" chref="./net_person_ays.html">民意舆情分析</span>
+                    </div>
+                </li>
+                <li>
+                   <span class="tit">
+                       民意对比
+                       <i class="arrow fr"></i>
+                   </span>
+                    <div class="min_menu">
+                        <span value="7" chref="./person_all_vs.html">民意总体对比</span>
+                        <span value="8" chref="./gov_channel_vs.html">政府渠道对比</span>
+                        <span value="9" chref="./net_person_vs.html">网络民意对比</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mainBody">
+            <!--派发分析-->
+            <div>
+                <div class="y_box tool cf">
+                    <div class="time_tool fr">
+                        <span>时间范围：</span>
+                        <div class="radio">
+                            <input type="radio" name="timeName" id="t5">
+                            <span></span>
+                            <label for="t5">全部</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="timeName" id="t6">
+                            <span></span>
+                            <label for="t6">24小时</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="timeName" id="t7">
+                            <span></span>
+                            <label for="t7">一周</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="timeName" id="t8">
+                            <span></span>
+                            <label for="t8">一月</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="timeName" id="t9">
+                            <span></span>
+                            <label for="t9">自定义时间</label>
+                        </div>
+                        <span><input type="text" value="2016/11/23" id="date03"/> - <input type="text" value="2016/11/23" id="date04"/></span>
+                    </div>
+                </div>
+                <div class="y_box cf">
+                    <div class="w10 y_bg">
+                        <div style="height: 800px;width: 700px;margin: 0 auto" id="chartId"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <span>京ICP备0000000000号 版权所有  XXX政府</span>
+    <span> Copyright 2016 by Jusfoun.com. All Right Reserved</span>
+</footer>
+</body>
+<script type="text/javascript" src='../js/lib/echarts/echarts.min.js'></script>
+<script type="text/javascript" src='../js/lib/laydate/laydate.js'></script>
+<script src='../js/send_ays.js'></script>
+</html>
+
+

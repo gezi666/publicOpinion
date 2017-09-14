@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>大数据预警</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src='../js/lib/jquery.min.js'></script>
+    <script src='../js/common.js'></script>
+</head>
+<body>
+<header>
+    <div class="header">
+        <span class="logo"></span>
+        <span class="title">九次方民意云大数据平台</span>
+        <span class="change_theme">深色版</span>
+        <span class="out fr">退出</span>
+        <span class="head_icon fr">
+            <a href="information.html" style="display: inline-block;width: 100%;height: 100%"></a>
+        </span>
+        <span class="loading fr"><a href="./appLoad.html">APP下载</a></span>
+    </div>
+</header>
+<div class="menu">
+    <ul>
+        <li chref="./index.html">首页<div class="shadow"></div></li>
+        <li chref="./opinionFocus.html">民意聚焦<div class="shadow"></div></li>
+        <li chref="./send_ays.html">专题分析<div class="shadow"></div></li>
+        <li chref="./war-index.html" class="active">大数据预警<div class="shadow"></div></li>
+        <li chref="./person_gov_search.html">民意查询<div class="shadow"></div></li>
+        <li chref="./opinionMonitoring.html">民意监测<div class="shadow"></div></li>
+    </ul>
+    <time class="fr">2016年8月1日</time>
+</div>
+<div id="content">
+    <!--大数据预警首页-->
+    <div class="mainContainer">
+        <div class="changeBar">
+            <div class="changeBar-item marL20">
+                <span class="switch marR14  active">投诉举报预警</span>
+                <span class="switch">负面舆情预警</span>
+            </div>
+            <div class="changeBar-item marR110">
+                <div class="flexCenter marR26">民意预警情况：
+                    <span class="situation flexCenter">轻微预警</span>
+                </div>
+                <div class="flexCenter">日期：
+                    <input type="text" class="select-data" id="date01" value="2016-12-12" />
+                </div>
+            </div>
+        </div>
+        <div class="war-container complaints" style="margin-top: 20px;">
+            <div class="w10 y_bg">
+                <span class="title_chart">投诉举报变化趋势</span>
+                <div style="height:400px;width: 100%;" id="chartLine"></div>
+            </div>
+        </div>
+        <div class="war-container complaints">
+            <div class="war-chart war-item marR14 y_bg" style="height: 562px;width: 40%" id="warningArea"></div>
+            <div class="war-item LContainer" style="width: 60%">
+                <div class="war-chart LChart marB14 y_bg" id="chart-department" style="height: 274px"></div>
+                <div class="war-chart LChart y_bg" id="chart-theme"  style="height: 274px"></div>
+            </div>
+        </div>
+        <div class="war-container negTrend disNone">
+            <div class="war-chart war-item marR14 y_bg" style="height: 562px;width: 40%" id="neg-warningArea"></div>
+            <div class="war-item LContainer" style="width: 60%">
+                <div class="war-chart LChart marB14 y_bg" id="chart-negTrend" style="height: 274px"></div>
+                <div class="war-chart LChart y_bg" id="chart-negTheme"  style="height: 274px"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <span>京ICP备0000000000号 版权所有  XXX政府</span>
+    <span> Copyright 2016 by Jusfoun.com. All Right Reserved</span>
+</footer>
+</body>
+<script src='../js/lib/echarts/echarts.min.js'></script>
+<script src="../js/lib/echarts/jining.js"></script>
+<script src='../js/lib/laydate/laydate.js'></script>
+<script src="../js/common_chart.js"></script>
+<script src="../js/war-index.js"></script>
+</html>

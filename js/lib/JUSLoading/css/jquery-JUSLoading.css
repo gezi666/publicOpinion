@@ -1,0 +1,187 @@
+@keyframes circleAnimation{
+    from {
+        transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
+@-webkit-keyframes circleAnimation
+{
+    from {
+        transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
+.y_loading_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(255,255,255,0.2);
+    overflow: hidden;
+}
+@media \0screen{/* 兼容IE8 */
+    .y_loading_container{
+        background-color: rgb(255,255,255);
+        filter: alpha(opacity=20);
+        *zoom:1;
+    }
+    .y_loading_container .y_loading_main{
+        position: relative;
+    }
+}
+.y_loading_container:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.y_loading_container .y_loading_main{
+    padding: 4px 4px 6px 4px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+.y_loading_main img{
+    vertical-align: -9px;
+    margin-right: 4px;
+}
+.y_loading_container .text_bg{
+    background:#000;
+    background:rgba(0,0,0,0.8); filter:alpha(opacity=80);
+    width: 100px;
+}
+.y_loading_container .lineBox{
+    height: 30px;
+    line-height: 30px;
+}
+.y_loading_container .lineBox .jsf_img{
+     float: left;
+}
+.text_bg .jsf_img_text{
+    color: #fff !important;
+    text-indent: 0 !important;
+    display: block !important;
+}
+.text_msg .jsf_img_text{
+    min-width: 50px;
+    padding: 0 15px;
+    height: 34px;
+    line-height: 34px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    color: #fff !important;
+    text-indent:0 !important;
+}
+.text_msg .jsf_img{
+    display: none !important;
+}
+.y_loading_main .jsf_img{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    display: inline-block;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-size: cover;
+}
+.y_loading_container .absolute_mid{
+    position: absolute;
+    margin: auto;
+    display: block;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+.y_loading_main .circleAnimation{
+    -moz-transform-origin: 50% 50%;
+    -webkit-transform-orcircleAnimationigin:50% 50%;
+    -o-transform-origin:50% 50%;
+    animation: circleAnimation 0.6s linear infinite;
+    -webkit-animation: circleAnimation 0.6s linear infinite; /* Safari 与 Chrome */
+}
+.y_loading_main .img_00{
+    background-image: url("./img/default00.png");
+}
+.y_loading_main .img_0{
+    background-image: url("./img/default0.png");
+}
+.y_loading_main .img_1{
+    background-image: url("./img/default1.gif");
+    width: 100px;
+    height: 20px;
+}
+.y_loading_main .img_1.ie8_img{
+    background-image: url("./img/default1.gif") !important;
+    width: 100px !important;
+    height: 20px !important;
+}
+.y_loading_main .img_0 + span{
+    color: #fff;
+}
+.text_bg .img_00{
+    background-image: url("./img/default0.png");
+}
+.y_loading_main .img_01{
+    background-image: url("./img/default11.gif") !important;
+    width: 100px !important;
+    height: 20px !important;
+}
+.text_bg .img_01{
+    background-image: url("./img/default1.gif") !important;
+}
+
+.y_loading_main .ie8_img{
+    width: 32px ;
+    height: 32px ;
+    background-image: url("./img/loading-2.gif") ;
+}
+.text_bg .ie8_img.img_01{
+    background-image: url("./img/default1.gif") !important;
+}
+.y_loading_main .jsf_img_text{
+    color: #8a8a8a;
+    display: inline-block;
+}
+.y_loading_container svg{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
+}
+.y_loading_container .y_msg{
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: rgba(0,0,0,1);
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.y_loading_container .y_msg{
+    display: inline-block;
+    background-color:rgba(20,20,20,0.2);
+    width:80px;
+    height:30px;
+    font-size:14px;
+    line-height:30px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <script type="text/javascript" src='../js/lib/jquery.min.js'></script>
+    <script type="text/javascript" src='../js/common.js'></script>
+</head>
+<body>
+<header>
+    <div class="header">
+        <span class="logo"></span>
+        <span class="title">九次方民意云大数据平台</span>
+        <span class="change_theme">深色版</span>
+        <span class="out fr">退出</span>
+        <span class="head_icon fr">
+            <a href="information.html" style="display: inline-block;width: 100%;height: 100%"></a>
+        </span>
+        <span class="loading fr"><a href="./appLoad.html">APP下载</a></span>
+    </div>
+</header>
+<div class="menu">
+    <ul>
+        <li chref="./index.html">首页<div class="shadow"></div></li>
+        <li chref="./opinionFocus.html">民意聚焦<div class="shadow"></div></li>
+        <li chref="./send_ays.html">专题分析<div class="shadow"></div></li>
+        <li chref="./war-index.html">大数据预警<div class="shadow"></div></li>
+        <li chref="./person_gov_search.html">民意查询<div class="shadow"></div></li>
+        <li chref="./opinionMonitoring.html">民意监测<div class="shadow"></div></li>
+    </ul>
+    <time class="fr">2016年8月1日</time>
+</div>
+<div id="content">
+    <!--load内容-->
+    <div class="mainBody">
+        <div class="y_box cf">
+           <div class="y_bg" style="height: 800px;">
+               <div class="appLoad">
+                   <div class="app fl">
+                       <span class="app_tit ios_bg">
+                           <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2337" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48"><defs><style type="text/css"></style></defs><path d="M774.230911 538.724665c-1.226944-113.907283 99.79282-168.526251 104.318904-171.275875-56.765865-77.253478-145.199986-87.849814-176.668699-89.064478-75.223239-7.105838-146.802484 41.23003-184.979992 41.23003-38.081317 0-97.006358-40.200584-159.381987-39.158858-82.034365 1.13894-157.64032 44.405349-199.865004 112.769366C72.4598 530.802228 135.850549 734.676545 218.878544 846.340741c40.59865 54.584176 88.995917 115.986641 152.482857 113.736391 61.20906-2.249227 84.317361-36.832883 158.2717-36.832883 73.994248 0 94.763271 36.832883 159.497621 35.694967 65.812915-1.111311 107.537202-55.625902 147.805324-110.415762 46.614667-63.405075 65.791425-124.806517 66.944691-127.907135C902.397966 719.970612 775.53358 674.741501 774.230911 538.724665zM652.579247 204.485231c33.69952-38.053688 56.491619-90.922802 50.284243-143.57293-48.588625 1.817392-107.425661 30.05655-142.317333 68.075445-31.234375 33.732266-58.582233 87.458911-51.27685 139.148154C563.495326 272.060279 618.820376 242.470357 652.579247 204.485231z" p-id="2338"></path></svg>
+                           iOS下载
+                       </span>
+                       <img src="../images/load_ios.png"/>
+                       <span>扫码下载APP</span>
+                   </div>
+                   <div class="app fr">
+                       <span class="app_tit android_bg">
+                           <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3034" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48"><defs><style type="text/css"></style></defs><path d="M204.229 356.526c-27.907 0-50.511 23.302-50.511 52.066v203.412c0 28.774 22.626 52.080 50.511 52.080s50.511-23.302 50.511-52.080v-203.412c0.001-28.743-22.595-52.066-50.511-52.066zM813.583 356.526c-27.907 0-50.525 23.302-50.525 52.066v203.412c0 28.774 22.641 52.080 50.525 52.080s50.511-23.302 50.511-52.080v-203.412c0-28.743-22.626-52.066-50.511-52.066zM285.139 729.801c0 22.081 17.63 39.961 39.388 39.961h44.969v113.19c0 28.774 22.626 52.080 50.511 52.080s50.525-23.302 50.525-52.080v-113.19h78.59v113.19c0 28.774 22.641 52.080 50.525 52.080s50.511-23.302 50.511-52.080v-113.19h44.969c21.748 0 39.388-17.883 39.388-39.961v-371.706h-449.472v371.706zM615.474 165.52l41.508-61.136c2.46-3.623 1.857-8.39-1.347-10.637-3.236-2.254-7.846-1.11-10.306 2.478l-43.142 63.543c-28.404-11.346-59.984-17.697-93.266-17.697s-64.864 6.334-93.266 17.697l-43.142-63.543c-2.46-3.623-7.081-4.723-10.306-2.478-3.236 2.256-3.826 7.004-1.347 10.637l41.508 61.136c-66.009 31.181-112.339 90.368-118.213 159.474h449.472c-5.929-69.073-52.205-128.318-118.213-159.474zM414.075 261.859c-13.724 0-24.855-11.293-24.855-25.227 0-13.92 11.125-25.227 24.855-25.227s24.855 11.308 24.855 25.227c0 13.956-11.125 25.227-24.855 25.227zM606.788 261.859c-13.724 0-24.855-11.293-24.855-25.227 0-13.92 11.139-25.227 24.855-25.227 13.74 0 24.855 11.308 24.855 25.227 0 13.956-11.125 25.227-24.855 25.227z" p-id="3035"></path></svg>
+                           Android下载
+                       </span>
+                       <img src="../images/load_android.png"/>
+                       <span>扫码下载APP</span>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <span>京ICP备0000000000号 版权所有  XXX政府</span>
+    <span> Copyright 2016 by Jusfoun.com. All Right Reserved</span>
+</footer>
+</body>
+</html>

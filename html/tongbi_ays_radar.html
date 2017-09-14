@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" style="min-width:90%;">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <title>民意同比分析</title>
+    <script src='../js/lib/jquery.min.js'></script>
+    <script>
+        var simple=!localStorage.getItem('theme');
+        if(simple){
+            $('html').removeAttr('class');
+        }else{
+            $('html').addClass('black_theme');
+        }
+    </script>
+    <style>
+        body, html {
+            min-width: 800px;
+        }
+    </style>
+</head>
+<body style="margin: 0 auto;">
+<div class="y_box cf">
+    <div class="y_bg" style="border: none;">
+        <span class="title_chart">民意来源同比分析</span>
+        <div class="time_tool search_chart">
+            <span>所属区域：</span>
+            <select>
+                <option>济宁市全部区域</option>
+                <option>4</option>
+                <option>4</option>
+            </select>
+            <span>年份：</span>
+            <span><input type="text" class="time_year" value="2016" id="changeTime"/></span>
+        </div>
+        <div style="height: 400px;width: 80%;margin: 0 auto;" id="chart01"></div>
+    </div>
+</div>
+
+</body>
+
+<script src='../js/lib/echarts/echarts-all-2.js'></script>
+<script src='../js/lib/laydate/laydate.js'></script>
+<script>
+    laydate({elem: '#changeTime', format: 'YYYY',
+        choose: function(datas){ //选择日期完毕的回调
+            //alert('得到：'+datas);
+        }
+    })
+    fn_chart();
+    function fn_chart(){
+        var data = {
+            "status": 200,
+            "data": {
+                "statisticsDates": ["2016-01", "2016-02"],
+                "showData": [
+                    {
+                        "originCode":"origin01",
+                        "originName":"市长热线12345",
+                        "opinionCount":[800,900]
+                    },
+                    {
+                        "originCode":"origin02",
+                        "originName":"公安局",
+                        "opinionCount":[800,980]
+                    },
+                    {
+                        "originCode":"origin03",
+                        "originName":"信访局",
+                        "opinionCount":[800,880]
+                    },
+                    {
+                        "originCode":"origin04",
+                        "originName":"督查室",
+                        "opinionCount":[700,900]
+                    },
+                    {
+                        "originCode":"origin05",
+                        "originName":"城管局",
+                        "opinionCount":[900,970]
+                    }
+                ]}
+        };
+        function searchCode(name){
+            for(var i=0;i<data.data.showData.length;i++){
+                if(name == data.data.showData[i].originName){
+                    return data.data.showData[i].originCode;
+                }
+            }
+        }
+        //接口返回的数据 ends
+        var datas=[],maxValue=0;
+        for(var i=0; i<data.data.showData.length;i++){
+            for(var j=0;j<data.data.showData[i].opinionCount.length;j++){
+                maxValue = data.data.showData[i].opinionCount[j]>maxValue?data.data.showData[i].opinionCount[j]:maxValue;
+            }
+            datas.push(
+                {
+                    name:data.data.showData[i].originName,
+                    maxValue:maxValue,
+                    values:data.data.showData[i].opinionCount
+                }
+            )
+        }
+        var params = {
+            id:'chart01',
+            data:{
+                times:data.data.statisticsDates,
+                data:datas
+            }
+        };
+        var myChart = radarInit(params);
+        myChart.on('click',function(param){
+//            localStorage.setItem('time',param.seriesName);
+//            localStorage.setItem('type','27');//type=27同比分析--民意来源同比分析
+//            localStorage.setItem('code',searchCode(param.name));
+//            localStorage.setItem('name',param.name);
+            var pm = '?type=27&time='+param.seriesName+'&name='+param.name+'&code='+searchCode(param.name);
+            window.open('./source_scale.html'+pm);
+        });
+    }
+    function radarInit(param){
+        var data = param.data;
+        var indicator = [];
+        var times = [];
+        var datas = [];
+        for(var i=0;i<data.times.length;i++){
+            times.push({
+                name:data.times[i],
+                textStyle : {
+                    color:simple?'#808080':'#00c7e2'
+                },
+                icon:'line'
+            });
+            if(i<1){
+                datas.push({
+                    name:data.times[i],
+                    value:[],
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                color: "rgba(0,144,244,0.4)"
+                            }
+                        }
+                    }
+                });
+            }else{
+                datas.push({
+                    name:data.times[i],
+                    value:[],
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {},
+                            lineStyle: {
+                                type: "dotted"
+                            }
+                        }
+                    }
+                });
+            }
+        }
+        for(var i=0;i<data.data.length;i++){
+            indicator.push({
+                text : data.data[i].name,
+                max: data.data[i].maxValue
+            });
+            for(var j=0;j<data.times.length;j++){
+                datas[j].value.push(data.data[i].values[j]);
+            }
+        }
+        var option = {
+            color: ["#6485f7","#77cd3c"],
+            legend: {
+                orient: "horizontal",
+                x:'right',
+                y: "0",
+                data: times
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            calculable : true,
+            polar : [
+                {
+                    type: "circle",
+                    radius:150,
+                    center:[ "50%", "50%"],
+                    name : {
+                        textStyle: {
+                            color:simple?'#333':'#ffd200'
+                        }
+                    },
+                    indicator : indicator
+                }
+            ],
+            series : [
+                {
+                    name: '',
+                    type: 'radar',
+                    data : datas,
+                    itemStyle:{
+                        normal:{
+                            label:{
+                                textStyle:{
+                                    fontSize:16
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        };
+        var mychart = echarts.init(document.getElementById(param.id));
+        mychart.setOption(option);
+        return mychart;
+    }
+</script>
+</html>

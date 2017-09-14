@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>网络民意舆情分析</title>
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <script type="text/javascript" src='../js/lib/jquery.min.js'></script>
+    <script type="text/javascript" src='../js/common.js'></script>
+</head>
+<body>
+<header>
+    <div class="header">
+        <span class="logo"></span>
+        <span class="title">九次方民意云大数据平台</span>
+        <span class="change_theme">深色版</span>
+        <span class="out fr">退出</span>
+        <span class="head_icon fr">
+            <a href="information.html" style="display: inline-block;width: 100%;height: 100%"></a>
+        </span>
+        <span class="loading fr"><a href="./appLoad.html">APP下载</a></span>
+    </div>
+</header>
+<div class="menu">
+    <ul>
+        <li chref="./index.html">首页<div class="shadow"></div></li>
+        <li chref="./opinionFocus.html">民意聚焦<div class="shadow"></div></li>
+        <li chref="./send_ays.html" class="active">专题分析<div class="shadow"></div></li>
+        <li chref="./war-index.html">大数据预警<div class="shadow"></div></li>
+        <li chref="./person_gov_search.html">民意查询<div class="shadow"></div></li>
+        <li chref="./opinionMonitoring.html">民意监测<div class="shadow"></div></li>
+    </ul>
+    <time class="fr">2016年8月1日</time>
+</div>
+<div id="content">
+    <!--专题分析-->
+    <div class="main">
+        <div class="left_menu">
+            <ul>
+                <li>
+                   <span class="tit">
+                       政府渠道专题
+                       <i class="arrow fr"></i>
+                   </span>
+                    <div class="min_menu">
+                        <span value="0" chref="./send_ays.html">派发分析</span>
+                        <span value="1" chref="./type_ays.html">类型分析</span>
+                        <span value="2" chref="./area_ays.html">区域分析</span>
+                        <span value="3" chref="./source_ays.html">来源分析</span>
+                        <span value="4" chref="./tongbi_ays.html">同比分析</span>
+                        <span value="5" chref="./huanbi_ays.html">环比分析</span>
+                    </div>
+                </li>
+                <li class="active">
+                   <span class="tit">
+                       网络民意专题
+                       <i class="arrow fr"></i>
+                   </span>
+                    <div class="min_menu">
+                        <span class="active" value="6" chref="./net_person_ays.html">民意舆情分析</span>
+                    </div>
+                </li>
+                <li>
+               <span class="tit">
+                   民意对比
+                   <i class="arrow fr"></i>
+               </span>
+                    <div class="min_menu">
+                        <span value="7" chref="./person_all_vs.html">民意总体对比</span>
+                        <span value="8" chref="./gov_channel_vs.html">政府渠道对比</span>
+                        <span value="9" chref="./net_person_vs.html">网络民意对比</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mainBody">
+            <!--网络民意舆情分析-->
+            <div>
+                <div class="y_box tool cf">
+                    <div class="select" style="margin-left: 20px;">
+                        <span>事件：</span>
+                        <select>
+                            <option>全部</option>
+                            <option>下雨天交通拥堵</option>
+                        </select>
+                    </div>
+                    <div class="keyword">
+                        <span>关键词：</span>
+                        <div>
+                            <strong>&lt;</strong>
+                            <span>古槐树</span>
+                            <span>济宁交管部门</span>
+                            <span>车祸</span>
+                            <strong>&gt;</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="y_box cf">
+                    <div class="w10 y_bg" style="padding: 0 20px;">
+                        <div class="time_tool top_tool">
+                            <span>时间范围：</span>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t0">
+                                <span></span>
+                                <label for="t0">全部</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t1">
+                                <span></span>
+                                <label for="t1">24小时</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t2">
+                                <span></span>
+                                <label for="t2">一周</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t3">
+                                <span></span>
+                                <label for="t3">一月</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t4">
+                                <span></span>
+                                <label for="t4">自定义时间</label>
+                            </div>
+                            <span><input type="text" value="2016/11/23" id="date01"/> 至 <input type="text" value="2016/11/23" id="date02"/></span>
+                        </div>
+                        <span class="title_chart">各媒体民意走势</span>
+                        <div style="height: 300px;" id="chart01"></div>
+                    </div>
+                </div>
+                <div class="y_box cf" style="margin-top: 20px;">
+                    <div class="w5 y_bg fl">
+                        <span class="title_chart">各媒体民意占比</span>
+                        <div style="height: 300px;width: 100%;">
+                            <div style="height: 100%;width: 100%;" id="chart02"></div>
+                        </div>
+                    </div>
+                    <div class="w5 y_bg fr">
+                        <span class="title_chart">民意来源Top10</span>
+                        <div style="height: 300px;" id="chart03"></div>
+                    </div>
+                </div>
+                <div class="y_box cf" style="margin-top: 20px;">
+                    <div class="w10 y_bg" style="padding: 0 20px;">
+                        <span class="title_chart">各情感民意走势</span>
+                        <div style="height: 400px;" id="chart04"></div>
+                    </div>
+                </div>
+                <div class="y_box cf" style="margin-top: 20px;">
+                    <div class="w5 y_bg fl">
+                        <span class="title_chart">情感分布</span>
+                        <div style="height: 300px;width: 500px;margin: 0 auto;padding-bottom: 10px;" id="chart05"></div>
+                    </div>
+                    <div class="w5 y_bg fr">
+                        <span class="title_chart">负面信息来源媒体</span>
+                        <div style="height: 300px;width: 500px;margin: 0 auto;padding-bottom: 10px;" id="chart06"></div>
+                    </div>
+                </div>
+                <div class="y_box cf" style="margin-top: 20px;">
+                    <div class="w10 y_bg" style="height: 760px;">
+                        <span class="title_chart">民意来源区域分布</span>
+                        <div class="w6 fl">
+                            <div style="height: 680px;" id="chart07"></div>
+                        </div>
+                        <div class="w4 fr">
+                            <div style="height: 350px;" id="chart08"></div>
+                        </div>
+                        <div class="w4 fr">
+                            <div style="height: 350px;" id="chart09"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="y_box cf" style="margin-top: 20px;">
+                    <div class="w10 y_bg" style="padding: 0 20px 30px 20px;">
+                        <span class="title_chart">最新民意</span>
+                        <ul class="net_search" id="searchId">
+                            <script id="personListId" type="text/html">
+                                {{each showData as obj index}}
+                                <li chref="{{obj.articleLink}}">
+                                    <p><span>{{obj.opinionTitle}}</span>
+                                        {{if obj.emotionType==0}}
+                                        <span class="red">负面</span>
+                                        {{else if obj.emotionType==1}}
+                                        <span class="yellow">中性</span>
+                                        {{else}}
+                                        <span class="green">正面</span>
+                                        {{/if}}
+                                    <div class="list_tool fr">
+                                        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8526" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"><defs><style type="text/css"></style></defs><path d="M884.133485 255.150144l-85.733617 0-159.635767 0 0-29.04757c0-39.084157-34.509978-77.376275-73.602322-77.376275l-106.323561 0c-39.093367 0-67.714218 38.292118-67.714218 77.376275l0 29.04757-159.635767 0-91.622744 0c-9.795087 0-17.720593 8.121981-17.720593 17.907858 0 9.785877 7.925507 17.907858 17.720593 17.907858l91.622744 0 0 466.756563c0 68.39881 52.634778 117.551276 121.026424 117.551276l318.971705 0c68.390623 0 126.913505-49.151443 126.913505-117.551276l0-466.756563 85.733617 0c9.795087 0 17.720593-8.121981 17.720593-17.907858C901.854079 263.271102 893.928572 255.150144 884.133485 255.150144zM426.939719 226.102574c0-19.546172 12.360516-41.560558 31.898501-41.560558l106.323561 0c19.537985 0 38.809911 22.014386 38.809911 41.560558l0 29.04757-177.031972 0L426.939719 226.102574zM763.607458 757.722424c0 48.852638-43.268456 81.735559-92.121094 81.735559l-318.971705 0c-48.853661 0-85.210707-32.881898-85.210707-81.735559l0-466.756563 123.82005 0 247.6401 0 124.843356 0L763.607458 757.722424z" p-id="8527"></path><path d="M514.944052 385.587915c-9.795087 0-17.396205 7.934716-17.396205 17.720593l0 301.251112c0 9.785877 7.601118 17.720593 17.396205 17.720593s17.396205-7.934716 17.396205-17.720593l0-301.251112C532.340257 393.522632 524.738116 385.587915 514.944052 385.587915z" p-id="8528"></path><path d="M373.216143 421.030126c-9.795087 0-17.907858 7.934716-17.907858 17.720593L355.308285 669.119457c0 9.785877 8.112772 17.720593 17.907858 17.720593s17.907858-7.934716 17.907858-17.720593l0-230.368738C391.124002 428.963819 383.010207 421.030126 373.216143 421.030126z" p-id="8529"></path><path d="M621.367897 438.750719 621.367897 669.119457c0 9.785877 8.112772 17.720593 17.907858 17.720593s17.907858-7.934716 17.907858-17.720593l0-230.368738c0-9.785877-8.112772-17.720593-17.907858-17.720593S621.367897 428.963819 621.367897 438.750719z" p-id="8530"></path></svg>
+                                        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3826" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"><defs><style type="text/css"></style></defs><path d="M728.502857 925.988571 295.497143 925.988571c-105.325714 0-190.171429-84.845714-190.171429-190.171429l0-118.491429c0-65.828571 35.108571-128.731429 92.16-162.377143 7.314286-4.388571 16.091429-1.462857 20.48 4.388571 4.388571 7.314286 1.462857 16.091429-4.388571 20.48-48.274286 29.257143-77.531429 81.92-77.531429 137.508571l0 118.491429c0 89.234286 71.68 160.914286 160.914286 160.914286l433.005714 0c89.234286 0 160.914286-71.68 160.914286-160.914286l0-118.491429c0-51.2-23.405714-98.011429-64.365714-128.731429-5.851429-4.388571-7.314286-14.628571-2.925714-20.48 4.388571-5.851429 14.628571-7.314286 20.48-2.925714 48.274286 36.571429 76.068571 92.16 76.068571 152.137143l0 118.491429C918.674286 839.68 833.828571 925.988571 728.502857 925.988571z" p-id="3827"></path><path d="M239.908571 779.702857l0-102.4c0-362.788571 222.354286-416.914286 333.531429-419.84l0-89.234286c0-14.628571 8.777143-26.331429 20.48-32.182857 13.165714-5.851429 27.794286-1.462857 38.034286 7.314286l212.114286 188.708571c7.314286 7.314286 10.24 16.091429 10.24 24.868571s-2.925714 17.554286-10.24 24.868571L631.954286 573.44c-8.777143 8.777143-24.868571 11.702857-36.571429 7.314286-13.165714-5.851429-20.48-17.554286-20.48-32.182857l0-90.697143c-169.691429 1.462857-250.148571 36.571429-304.274286 222.354286L239.908571 779.702857zM588.068571 285.257143c-106.788571 0-277.942857 40.96-313.051429 295.497143 62.902857-125.805714 157.988571-152.137143 313.051429-152.137143l14.628571 0 0 119.954286c0 1.462857 0 4.388571 2.925714 4.388571 1.462857 0 4.388571 0 5.851429-1.462857l213.577143-191.634286c1.462857-1.462857 1.462857-2.925714 1.462857-2.925714 0-1.462857 0-2.925714-1.462857-4.388571L612.937143 163.84C610.011429 160.914286 608.548571 160.914286 605.622857 160.914286c-2.925714 1.462857-2.925714 4.388571-2.925714 4.388571l0 118.491429L588.068571 283.794286z" p-id="3828"></path><path d="M789.942857 803.108571 384.731429 803.108571c-8.777143 0-14.628571-5.851429-14.628571-14.628571s5.851429-14.628571 14.628571-14.628571L789.942857 773.851429c8.777143 0 14.628571 5.851429 14.628571 14.628571S797.257143 803.108571 789.942857 803.108571z" p-id="3829"></path><path d="M791.405714 681.691429l-394.971429 0c-8.777143 0-14.628571-5.851429-14.628571-14.628571s5.851429-14.628571 14.628571-14.628571l394.971429 0c8.777143 0 14.628571 5.851429 14.628571 14.628571S800.182857 681.691429 791.405714 681.691429z" p-id="3830"></path></svg>
+                                        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7875" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"><defs><style type="text/css"></style></defs><path d="M879.87 550.444l-8.19-5.398 8.536-4.833c8.586-4.861 25.074-34.03 25.104-61.181-1.125-44.188-45.546-75.044-108.056-75.044L608.548 403.988l2.965-8.069c30.346-82.592 24.605-193.399-13.067-252.262-22.103-34.506-47.884-41.75-65.62-41.75-40.813 0-61.505 26.376-61.505 78.396 0 75.078-11.72 108.739-23.724 136.782l-0.203 0.426c-5.87 11.191-25.375 32.917-49.96 51.137-21.955 16.271-55.749 35.666-92.068 35.666L185.571 404.314c-18.884 0-35.769 6.913-48.828 19.99-16.033 16.055-24.865 40.042-24.886 67.565l9.042 325.682c3.725 50.125 28.057 75.541 72.32 75.541 0.297 0.002 47.024 0.204 65.343 0.204 9.377 0 18.123-0.075 23.395-0.202 12.783-0.421 23.746-6.534 34.348-14.382l3.477-2.571c7.609-5.637 14.18-10.506 21.337-10.506 2.57 0 5.364 1.314 14.656 5.874 6.222 3.053 13.965 6.853 22.586 10.516 19.509 8.243 47.866 13.572 72.23 13.572l250.547 0c53.979 0 118.325-13.522 118.325-77.942 0-13.466-2.688-21.536-11.059-33.214l-5.199-7.252 8.678-2.079c17.744-4.252 59.018-18.61 59.018-60.002 0-13.307-6.512-32.232-12.443-36.162l-11.273-7.472 13.104-3.344c13.839-3.532 45.28-30.298 45.235-61.152C905.524 581.053 896.653 561.506 879.87 550.444zM317.36 851.401l-2.564 1.791c-6.295 4.396-11.492 8.189-14.03 10.059-9.113 6.722-15.574 8.345-19.201 8.77l-0.508 0.038c-4.488 0.143-12.804 0.214-24.717 0.214-16.067 0-56.471-0.129-66.004-0.205l-0.688-0.006c-22.12 0-41.758-20.019-46.673-47.6l-0.068-0.508-9.083-339.084 0-0.273c0-14.107 5.5-28.741 15.09-40.149 10.464-12.446 24.25-19.301 38.821-19.301l6 0 0 0.195 111.65 0.335c0.939 0 1.969-0.077 3.059-0.157 0.9-0.067 1.798-0.132 2.696-0.166l6.221-0.229L317.361 851.401zM883.604 605.304c-0.763 21.003-30.733 50.868-51.854 52.278l0.287 20.502c11.403 5.819 17.186 17.853 17.201 35.837 0 15.286-8.961 27.691-25.914 35.88-11.498 5.554-26.786 9.001-42.672 9.698l-0.344 18.75c17.279 7.17 17.252 28.72 17.242 36.193 0 18.376-8.163 33.428-23.606 43.519-16.353 10.685-41.087 16.103-73.514 16.103L440.97 874.064c-14.172 0-40.23-7.827-54.753-14.853-10.743-5.192-26.202-13.723-36.431-19.368-2.905-1.604-5.34-2.946-7.043-3.869l-3.144-1.701L339.599 421.27l4.398-1.219c63.547-17.607 115.959-72.699 128.87-97.134 13.683-31.885 21.603-66.166 21.603-146.516 0-34.866 11.005-50.415 35.687-50.415 15.617 0 38.977 15.9 51.007 34.721 16.793 26.219 26.954 66.824 27.876 111.399 0.99 47.871-8.806 95.291-27.59 133.613l-4.915 20.007 222.458-0.048 0.164 0.009c21.484 1.174 41.527 6.213 56.437 14.189 18.147 9.708 27.739 23.136 27.739 38.834l-0.002 0.184-0.277 9.039-0.025-0.001c0.113 4.368-1.48 12.328-2.222 15.289-2.819 11.26-7.528 19.692-13.997 25.056-7.057 5.861-13.438 8.55-17.785 9.782l-0.168 19.962c5.007 1.061 12.443 3.107 17.551 6.618C878.002 572.592 884.272 587.415 883.604 605.304z" p-id="7876"></path></svg>
+                                    </div>
+                                    </p>
+                                    <p>
+                                        <span>{{obj.originMedia}}</span>
+                                        <span class="time">{{obj.eventTime}}</span>
+                                    </p>
+                                    <p>{{obj.opinionContent}}</p>
+                                </li>
+                                {{/each}}
+                            </script>
+                        </ul>
+                        <span class="button more">查看更多</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <span>京ICP备0000000000号 版权所有  XXX政府</span>
+    <span> Copyright 2016 by Jusfoun.com. All Right Reserved</span>
+</footer>
+</body>
+<script type="text/javascript" src='../js/lib/echarts/echarts.min.js'></script>
+<script type="text/javascript" src='../js/lib/echarts/echarts-liquidfill.js'></script>
+<script type="text/javascript" src='../js/lib/laydate/laydate.js'></script>
+<script type="text/javascript" src='../js/jining.js'></script>
+<script type="text/javascript" src='../js/common_chart.js'></script>
+<script type="text/javascript" src='../js/lib/arttemplate.js'></script>
+<script src='../js/net_person_ays.js'></script>
+</html>
+
+

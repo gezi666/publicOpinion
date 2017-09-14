@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src='../js/lib/jquery.min.js'></script>
+    <script type="text/javascript" src='../js/common.js'></script>
+</head>
+<body>
+	<header>
+    <div class="header">
+        <span class="logo"></span>
+        <span class="title">九次方民意云大数据平台</span>
+        <span class="change_theme">深色版</span>
+        <span class="out fr">退出</span>
+        <span class="head_icon fr">
+            <a href="information.html" style="display: inline-block;width: 100%;height: 100%"></a>
+        </span>
+        <span class="loading fr"><a href="./appLoad.html">APP下载</a></span>
+    </div>
+</header>
+    <div class="menu">
+        <ul>
+            <li chref="./index.html" class="active">首页<div class="shadow"></div></li>
+            <li chref="./opinionFocus.html">民意聚焦<div class="shadow"></div></li>
+            <li chref="./send_ays.html">专题分析<div class="shadow"></div></li>
+            <li chref="./war-index.html">大数据预警<div class="shadow"></div></li>
+            <li chref="./person_gov_search.html">民意查询<div class="shadow"></div></li>
+            <li chref="./opinionMonitoring.html">民意监测<div class="shadow"></div></li>
+        </ul>
+        <time class="fr">2016年8月1日</time>
+    </div>
+    <div id="content">
+        <!--load内容-->
+        <div class="mainBody">
+            <div class="y_box cf">
+                <div class="y_top">
+                    <div class="w7 y_bg fl pr" style="height: 100%;padding: 0 20px;">
+                        <div class="time_tool top_tool">
+                            <span>时间范围：</span>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t0">
+                                <span></span>
+                                <label for="t0">全部</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t1">
+                                <span></span>
+                                <label for="t1">24小时</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t2">
+                                <span></span>
+                                <label for="t2">一周</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t3">
+                                <span></span>
+                                <label for="t3">一月</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="timeName" id="t4">
+                                <span></span>
+                                <label for="t4">自定义时间</label>
+                            </div>
+                            <span><input type="text" value="2016/11/23" id="date01"/> 至 <input type="text" value="2016/11/23" id="date02"/></span>
+                        </div>
+                        <span class="v_line"></span>
+                        <div class="w5 fl pr">
+                            <div class="total_count zf_count">
+                                <span class="count">1,234,567</span>
+                                <span class="name">政府渠道民意</span>
+                            </div>
+                            <div>
+                                <div id="chart01" style="height: 234px;width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="w5 fl pr">
+                            <div class="total_count net_count">
+                                <span class="count">1,234,567</span>
+                                <span class="name">政府渠道民意</span>
+                            </div>
+                            <div id="chart02" style="height: 234px;width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="w3 y_bg fr" style="height: 130px;">
+                        <div class="title">
+                            <i></i>
+                            <span>今日负面民意情况</span>
+                        </div>
+                        <!--warning0:良好，warning1:一般，warning2:轻度预警，warning3:高度预警-->
+                        <div class="warning warning3">
+                            <i class="icon"></i>
+                            <span id="warningId">高度预警</span>
+                        </div>
+                    </div>
+                    <div class="w3 y_bg fr" style="height: 130px;margin-top: 20px;">
+                        <div class="title">
+                            <i></i>
+                            <span>我的监测</span>
+                        </div>
+                        <div id="myCheckId">
+                            <div class="y_count w4 fl">
+                                <span class="count">12</span>
+                                <span class="name">监测事件</span>
+                            </div>
+                            <div class="y_count w6 fl bd_l">
+                                <span class="count g_color">34,567</span>
+                                <span class="name">监测舆情数</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="y_box tool cf">
+                <div class="v_menu fl">
+                    <span class="active">政府渠道民意</span>
+                    <span>网络民意</span>
+                </div>
+                <div class="time_tool fr">
+                    <span>时间范围：</span>
+                    <div class="radio">
+                        <input type="radio" name="timeName" id="t5">
+                        <span></span>
+                        <label for="t5">全部</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="timeName" id="t6">
+                        <span></span>
+                        <label for="t6">24小时</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="timeName" id="t7">
+                        <span></span>
+                        <label for="t7">一周</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="timeName" id="t8">
+                        <span></span>
+                        <label for="t8">一月</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="timeName" id="t9">
+                        <span></span>
+                        <label for="t9">自定义时间</label>
+                    </div>
+                    <span><input type="text" value="2016/11/23" id="date03"/> - <input type="text" value="2016/11/23" id="date04"/></span>
+                </div>
+            </div>
+            <div class="y_box cf">
+                <div class="y_mid">
+                    <div class="w3 y_bg fl left">
+                        <div id="chart03" style="height: 100%;"></div>
+                    </div>
+                    <div class="w7 y_bg fr rigth">
+                        <div id="chart04" style="height: 100%;"></div>
+                    </div>
+                    <div class="w7 fr rigth">
+                        <div class="w5 y_bg fl" style="height: 100%;">
+                            <div id="chart05" style="height: 100%;"></div>
+                        </div>
+                        <div class="w5 y_bg fr" style="height: 100%;">
+                            <div id="chart06" style="width: 100%;height: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="y_box cf">
+                <div class="y_bottom y_bg">
+                    <div class="fl one">
+                        <div style="height:100%;width: 60%;" id="chart07"></div>
+                <span class="fr tit">
+                    满意度
+                    <i class="icon up">➨</i>
+                    <i class="icon down">➨</i>
+                    <i class="icon">➨</i>
+                </span>
+                    </div>
+                    <div class="fl two">
+                        <div style="height:100%;width: 33.33%;float: left">
+                            <div style="height: 100%;width: 100%;" id="chart08"></div>
+                        </div>
+                        <div style="height:100%;width: 33.33%;float: left">
+                            <div style="height: 100%;width: 100%;" id="chart09"></div>
+                        </div>
+                        <div style="height:100%;width: 33.34%;float: left">
+                            <div style="height: 100%;width: 100%;" id="chart10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <span>京ICP备0000000000号 版权所有  XXX政府</span>
+    <span> Copyright 2016 by Jusfoun.com. All Right Reserved</span>
+</footer>
+</body>
+<script type="text/javascript" src='../js/lib/echarts/echarts.min.js'></script>
+<script type="text/javascript" src='../js/lib/echarts/echarts-liquidfill.js'></script>
+<script type="text/javascript" src='../js/lib/JUSLoading/js/jquery-JUSLoading.js'></script>
+<script type="text/javascript" src='../js/lib/laydate/laydate.js'></script>
+<script type="text/javascript" src='../js/jining.js'></script>
+<script type="text/javascript" src='../js/common_chart.js'></script>
+<script type="text/javascript" src='../js/index.js'></script>
+</html>
